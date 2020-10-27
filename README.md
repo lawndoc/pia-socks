@@ -33,7 +33,7 @@ Use the `Location` value for your `REGION`.
 
 ```shell
 # socks5h so the dns is done over the socks proxy
-$ curl -x socks5h://\<ip\_of\_host\>:1080
+$ curl -x socks5h://<ip_of_host>:1080
 ```
 
 ## Credits
