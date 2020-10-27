@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e -u -o pipefail
+
+set -- "$@" '--config' "/openvpn/${PROTOCOL}-${ENCRYPTION}/${REGION}.ovpn"
+
+if [ -n "$USERNAME" -a -n "$PASSWORD" ]; then
+	echo "$USERNAME" > /openvpn/auth.conf
+	echo "$PASSWORD" >> /openvpn/auth.conf
+	chmod 400 /openvpn/auth.conf
+	set -- "$@" '--auth-user-pass' '/openvpn/auth.conf'
+else
+	echo "OpenVPN credentials not set. Exiting."
+	exit 1
+fi
+
+openvpn "$@" --user nobody --auth-nocache --script-security 2 --up "/app/init.sh"

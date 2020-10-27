@@ -1,0 +1,31 @@
+version: '3'
+services:
+  private-socks:
+    build: private-socks
+    container_name: private-socks
+    image: private-socks:latest
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun
+    environment:
+      - REGION=US Dallas
+      - USERNAME=$PIA_USERNAME
+      - PASSWORD=$PIA_PASSWORD
+      - DNS=208.67.222.222 208.67.220.220
+      - PROTOCOL=udp
+      - ENCRYPTION=strong
+    networks:
+      - socksy_net
+    ports:
+      - 1080:1080
+    restart: always
+  unbound:
+    container_name: unbound
+    image: mvance/unbound:latest
+    networks:
+      - socksy_net
+    restart: always
+
+networks:
+  socksy_net:
