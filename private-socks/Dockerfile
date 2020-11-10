@@ -22,7 +22,7 @@ COPY ./etc /etc
 
 RUN chmod 500 /app/ovpn/run /app/init.sh
 
-ENV REGION="US Chicago" \
+ENV REGION="US Houston" \
 	USERNAME="" \
 	PASSWORD="" \
 	ENCRYPTION=strong \
