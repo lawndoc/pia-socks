@@ -2,8 +2,6 @@
 
 An [Alpine](https://alpinelinux.org/) Linux container running a socks5 proxy (using [dante](https://www.inet.no/dante/)) via Private Internet Access (OpenVPN).
 
-Protect your browsing activities through an encrypted and anonymized VPN proxy!
-
 You will need a [PrivateInternetAccess](https://www.privateinternetaccess.com/pages/how-it-works) account.
 If you don't have one, you can [sign up here](https://www.privateinternetaccess.com/pages/buy-vpn) for one.
 
