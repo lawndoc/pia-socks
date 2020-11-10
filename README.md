@@ -17,7 +17,7 @@ Substitute the environment variables for `REGION`, `USERNAME`, `PASSWORD` as ind
 
 ### Environment Variables
 
-`REGION` is optional. The default region is set to `US East`. The spelling/formatting for`REGION` should match the corresponding `.opvn` config name for that region.
+`REGION` is optional. The default region is set to `US Chicago`. The spelling/formatting for`REGION` should match the corresponding `.opvn` config name for that region.
 
 See the [PIA VPN Tunnel Network page](https://www.privateinternetaccess.com/pages/network) for details.
 Use the `Location` value for your `REGION`.

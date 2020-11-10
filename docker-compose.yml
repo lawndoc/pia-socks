@@ -9,7 +9,7 @@ services:
     devices:
       - /dev/net/tun
     environment:
-      - REGION=US Dallas
+      - REGION=US Chicago
       - USERNAME=$PIA_USERNAME
       - PASSWORD=$PIA_PASSWORD
       - DNS=208.67.222.222 208.67.220.220
