@@ -18,7 +18,8 @@ services:
     networks:
       - socksy_net
     ports:
-      - 1080:1080
+      - 1080:1080/tcp
+      - 1080:1080/udp
     restart: always
   unbound:
     container_name: unbound
