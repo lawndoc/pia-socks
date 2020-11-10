@@ -15,8 +15,6 @@ services:
       - DNS=208.67.222.222 208.67.220.220
       - PROTOCOL=udp
       - ENCRYPTION=strong
-    networks:
-      - socksy_net
     ports:
       - 1080:1080/tcp
       - 1080:1080/udp
@@ -24,9 +22,4 @@ services:
   unbound:
     container_name: unbound
     image: mvance/unbound:latest
-    networks:
-      - socksy_net
     restart: always
-
-networks:
-  socksy_net:
