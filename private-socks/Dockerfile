@@ -2,6 +2,7 @@ FROM alpine:latest
 MAINTAINER C.J. May
 
 EXPOSE 1080/udp
+EXPOSE 1080/tcp
 
 RUN echo "http://dl-4.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
 	apk add -q --progress --no-cache --update openvpn dante-server wget ca-certificates bind-tools unzip runit && \
