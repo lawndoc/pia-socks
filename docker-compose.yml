@@ -16,8 +16,8 @@ services:
       - PROTOCOL=udp
       - ENCRYPTION=strong
     ports:
-      - 1080:1080/tcp
-      - 1080:1080/udp
+      - "0.0.0.0:1080:1080/tcp"
+      - "0.0.0.0:1080:1080/udp"
     restart: always
   unbound:
     container_name: unbound
