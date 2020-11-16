@@ -1,4 +1,4 @@
-# A socks5 proxy via Private Internet Access.
+# A socks5 reverse proxy for Private Internet Access VPN.
 
 An [Alpine](https://alpinelinux.org/) Linux container running a socks5 proxy (using [dante](https://www.inet.no/dante/)) via Private Internet Access (OpenVPN).
 
